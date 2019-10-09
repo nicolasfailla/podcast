@@ -1,0 +1,511 @@
+/* VARIABLES GENERALES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.negro{
+  color: #060a24;
+}
+
+.azul{
+  color: #0000ec;
+}
+
+.tachado{
+  text-decoration:line-through;
+}
+
+button{
+  all: unset;
+}
+
+.imbplexsans {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.imbplexmono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h1 {
+  font-weight: 400;
+  margin-top: 2.5rem;
+}
+
+h2 {
+  font-weight: 400;
+  z-index: 500;
+}
+
+.row {
+  margin: 25px 20px 25px 20px;
+}
+
+.margen {
+  margin: 25px 20px 25px 20px;
+}
+
+.blanco {
+  color: #ffffff;
+}
+
+/* FIN VARIABLES GENERALES */
+
+/* MENU */
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 30px;
+  width: 30px;
+  justify-content: flex-start;
+  position: relative;
+  left: -2.4em;
+}
+
+
+nav .menuIcon {
+  padding: 24px;
+  margin-right: 24px;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  display: block;
+  right: -5rem;
+  
+}
+
+/* HAMBURGUESA CON SPANS */
+
+nav .navIcon {
+  background: #060A24;
+  display: block;
+  height: 2px;
+  width: 18px;
+  transition: background .2s ease-out;
+  -webkit-transition: background .2s ease-out;
+  -moz-transition: background .2s ease-out;
+  -ms-transition: background .2s ease-out;
+  -o-transition: background .2s ease-out;
+  position: relative;
+}
+
+nav .navIcon::before {
+  content: '';
+  background: #060A24;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  top: 6px;
+  transition: all .4s ease-out;
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+}
+
+nav .navIcon::after {
+  content: '';
+  background: #060A24;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  top: -6px;
+  transition: all .4s ease-out;
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+}
+
+
+/* FIN HAMBURGUESA CON SPANS */
+
+nav .toggle {
+  display: none;
+}
+
+.navLinks ul {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: -0.75rem;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+ 
+}
+
+.navLinks ul {
+  opacity: 0;
+}
+
+
+.navLinks ul {
+  flex-direction: column;
+  padding: 2rem 0 2rem 0;
+}
+
+.navLinks ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.navLinks ul li a {
+  text-decoration: none;
+  
+  line-height: 28px;
+
+}
+
+.navLinks ul li a:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+}
+
+.navLinks ul li a:active {
+  color: rgba(6, 10, 36, 0.56);
+  text-decoration: line-through;
+}
+
+
+
+.navLinks {
+  background-color: #0000EC;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 1000;
+  visibility: hidden;
+  max-height: 0;
+    transition: max-height .5s ease-out;
+    -webkit-transition: max-height .5s ease-out;
+    -moz-transition: max-height .5s ease-out;
+    -ms-transition: max-height .5s ease-out;
+    -o-transition: max-height .5s ease-out;
+}
+
+.navLinks ul li a {
+  display: block;
+  color: #FFF;
+  margin-top: 1.5%;
+  margin-left: 4%;
+  line-height: 28px;
+}
+
+.navLinks ul li a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* ACCIONES TOGGLE */
+
+nav #toggle:checked~.navLinks ul {
+  opacity: 1;
+}
+
+nav #toggle:checked~.menuIcon {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+nav #toggle:checked~.menuIcon .navIcon {
+  background-color: transparent;
+}
+
+nav #toggle:checked~.menuIcon .navIcon:before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  top: 0;
+}
+
+nav #toggle:checked~.menuIcon .navIcon:after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  top: 0;
+}
+
+nav #toggle:checked~.navLinks {
+  display: block;
+  max-height: 230px;
+  visibility: visible;
+}
+
+/* FIN ACCIONES TOGGLE */
+
+/* FIN MENU */
+
+/* SECCION INTRODUCCION */
+
+.boton {
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #00f3bb;
+  width: 100%;
+  height: 50px;
+  
+}
+
+.titulos {
+  color: #060a24 100%;
+  font-size: 1rem;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 42px;
+  padding-right: 6rem;
+  font-weight: 200;
+}
+
+.rowverde {
+  margin: 25px 20px 25px 20px;
+  width: 100%;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #060a24 100%;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.boton:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  transition-duration: 0.1s;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* FIN SECCION INTRODUCCION */
+
+/* SECCION EPISODIOS */
+
+.episodios {
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  clip-path: polygon(0 4%, 100% 0, 100% 95%, 0% 100%);
+  z-index: 400;
+  height: 1100px;
+}
+
+.novedades {
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
+  z-index: 400;
+  height: 280px;
+  padding: 25px 20px 25px 20px;
+}
+
+#sh2 {
+  color: black;
+  clip-path: none;
+  position: relative;
+  z-index: 800;
+}
+
+.episodiosiframes {
+  margin: 1.5rem 1.5rem 1rem 1rem;
+}
+
+.iframe {
+  width: 100%;
+  height: 190px;
+}
+
+/* FIN SECCION EPISODIOS */
+
+/* SECCION NOSOTROS */
+
+
+.columna3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: justify;
+}
+
+.imagencelular2{
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.row2{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#nosotros {
+ transform: translateY(-100px); 
+ /* position: relative;
+ top: -100px;*/
+}
+
+.margen3 {
+  margin: 25px 20px 25px 20px;
+}
+
+.margen3 p{
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+/*
+.imagentelefono {
+  
+  transform: translateY(-200px);
+
+  height: 350px;
+  
+}
+*/
+
+.imagenresponsive{
+  width: 100%;
+  height: auto;
+}
+
+/* FIN SECCION NOSOTROS */
+
+/* SECCION ENTREVISTAS */
+
+/*
+.dedondevenimos {
+   margin-top: 4rem; 
+}
+*/
+
+.imagenesarchivo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imagenesarchivocontenedor {
+  margin-bottom: 2rem;
+}
+
+/* FIN SECCION ENTREVISTAS */
+
+/* SECCION TOPICOS */
+
+.imagentemacontenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagentema {
+  width: 100%;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagentema img {
+  width: 33%;
+  font-weight: 400;
+}
+
+.textotema {
+  width: 100%;
+}
+
+.temastexto {
+  padding-right: 8rem;
+}
+
+.centrado p {
+  font-weight: 600;
+}
+
+.novedades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.novedadestexto {
+  width: 40%;
+  text-align: center;
+}
+
+.boton2 {
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #00f3bb;
+  width: 100%;
+  height: 50px;
+}
+
+/* FIN SECCION TOPICOS */
+
+/* SECCION FOOTER */
+
+.derechos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.redesicono i {
+  font-size: 1.3rem;
+}
+
+/* FIN SECCION FOOTER */
+
+
+
+
+
+
+

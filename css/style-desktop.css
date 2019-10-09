@@ -1,0 +1,317 @@
+@media only screen and (min-width: 768px) {
+
+  /* VARIABLES GENERALES */
+
+  .rowsinmargen {
+    padding: 0;
+    margin: 0;
+  }
+
+  .fila {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* MENU */
+
+  .logo img {
+    height: 36px;
+    width: 36px;
+    position: static;
+    justify-self: flex-start;
+    margin-left: 7.2rem;
+    
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+
+  .navLinks ul li {
+    list-style: none;
+    margin-right: 4rem;
+    margin-bottom: 0;
+    
+  }
+
+  .navList{
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLinks ul li a {
+    text-decoration: none;
+    color: #000;
+    line-height: 28px;
+  
+  
+  }
+  
+  .navLinks ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  
+  .navLinks ul li a:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through;
+  }
+
+  nav .menuIcon {
+    
+    display: none;
+    
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top:0;
+    position: static;
+    right: -6em;
+    width: 100%;
+    visibility: visible;
+    max-height: unset;
+    background-color: transparent;
+    
+  }
+
+  .navLinks ul {
+    opacity: 1;
+    flex-direction: row;
+    justify-content: left;
+    position: static;
+    
+  }
+
+    /* FIN MENU */
+
+
+    /* INTRODUCCION */
+
+    .boton {
+      font-weight: 500;
+      text-align: center;
+      vertical-align: middle;
+      background-color: #00f3bb;
+      width: 250px;
+      height: 50px;
+      margin-left: 6rem;
+    }
+  
+    .boton2 {
+      font-weight: 500;
+      text-align: center;
+      vertical-align: middle;
+      background-color: #00f3bb;
+      width: 250px;
+      height: 50px;
+      margin-left: none;
+      
+    }
+    
+    .boton :hover, .boton2:hover {
+      background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+      transition-duration: 0.1s;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+  span {
+    color: #54d17a;
+  }
+
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+  }
+
+  .titulos {
+    margin-left: 6rem;
+    font-size: 1.5rem;
+  }
+
+  .subtitulo {
+    margin-left: 6rem;
+    padding-right: 13rem;
+    
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+      /* FIN INTRODUCCION */
+
+      /* EPISODIOS */
+
+  .subtitulo2 {
+    margin-left: 0rem;
+    padding-right: 13rem;
+    text-align: justify;
+    text-justify: inter-word;
+    
+  }
+
+  .cartelverdecontenedor {
+    width: 12rem;
+    padding-left: 6rem;
+  }
+
+  .textomargen {
+    padding-left: 6rem;
+    padding-top: 2.5rem;
+  }
+
+  .textomargen {
+    padding-top: 5rem;
+  }
+
+  .episodiosiframes {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iframe {
+    width: 40%;
+  }
+
+ 
+
+  .columna {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+        /* FIN EPISODIOS */
+
+       /* DE DONDE VENIMOS */
+
+  .columna3 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: justify;
+
+    
+  }
+
+  .imagencelular2{
+    width: 20%;
+    margin-right: 2rem;
+    
+  }
+
+  .row2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    
+   
+  }
+
+  #nosotros {
+    transform: translateY(-100px); 
+   
+  }
+
+  .margen3 {
+   margin-left: 2rem;
+   padding-top: 70px;
+   
+  }
+
+  .margen3 p{
+    font-size: 0.8rem;
+    
+}
+  
+
+  .episodios {
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    z-index: 400;
+    height: 700px;
+  }
+
+         /* FIN DE DONDE VENIMOS */
+
+         /* INVITADOS */
+
+
+
+
+  .translate{
+    transform: translateY(-150px);
+  }
+
+
+  .invitados {
+    padding-left: 6rem;
+  }
+
+      /* FIN INVITADOS */
+
+  /* TOPICOS */
+
+  .temastexto {
+    padding-left: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .spacearound {
+    width: 90%;
+  }
+
+    /* FIN TOPICOS */
+
+
+
+  .novedades {
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+    z-index: 400;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .blanco {
+    margin-bottom: 1rem;
+  }
+
+  .cartelverde {
+    width: 300px;
+  }
+
+      /* FOOTER */
+
+  .redescontenedor {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .redes {
+    width: 300px;
+  }
+
+ 
+
+        /* FIN FOOTER */
+}
